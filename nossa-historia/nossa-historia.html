@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEADTC - Jardim Castelão - Nossa História</title>
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding-top: 70px; /* Espaço para o cabeçalho fixo */
+        }
+        
+        /* Cabeçalho fixo melhorado */
+        header {
+            top: 0;
+            left: 0;
+            width: 100%;
+            background:  #ffffff;
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header h1 {
+            font-size: 1.4rem;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        header p {
+            font-size: 0.9rem;
+            margin: 5px 0 0;
+            opacity: 0.9;
+        }
+        
+        /* Container principal */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.08);
+            border-radius: 5px;
+        }
+        
+        /* Marcadores de ano */
+        .year-marker {
+            display: block;
+            text-align: center;
+            margin: 1.5rem auto 0.8rem;
+            /* mantém as outras propriedades */
+            background-color: #1a4c8e;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            max-width: max-content;
+        }
+        
+        /* Títulos e textos */
+        h1, h2, h3 {
+            color: #1a4c8e;
+            margin: 1.8rem 0 1rem;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #1a4c8e;
+            padding-bottom: 0.7rem;
+            margin-top: 0;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 1.6rem;
+            padding-left: 10px;
+            border-left: 4px solid #1a4c8e;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            color: #2c6cbf;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+        
+        strong {
+            color: #1a4c8e;
+        }
+        
+        /* Listas */
+        ul {
+            margin-left: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        li {
+            margin-bottom: 0.7rem;
+        }
+        
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            color: #666;
+            border-top: 1px solid #eee;
+            background-color: #f5f5f5;
+        }
+        
+        /* Responsividade melhorada */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+            
+            .header-content {
+                padding: 0 10px;
+            }
+            
+            header h1 {
+                font-size: 1.2rem;
+            }
+            
+            header p {
+                font-size: 0.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+                padding-bottom: 0.5rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .year-marker {
+                font-size: 1rem;
+                padding: 4px 10px;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.1rem;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            .year-marker {
+                display: block;
+                text-align: center;
+                margin: 1.5rem auto 0.8rem;
+                /* mantém as outras propriedades */
+                background-color: #1a4c8e;
+                color: white;
+                padding: 5px 12px;
+                border-radius: 20px;
+                font-weight: bold;
+                font-size: 1.1rem;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+                max-width: max-content;
+            }
+        }
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+            }
+
+            .content-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            }
+
+            /* Para telas maiores */
+            @media (min-width: 768px) {
+            .image-container {
+                margin: 2.5rem 0;
+            }
+            
+            .content-image {
+                max-width: 80%;
+            }
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>IEADTC Jardim Castelão</h1>
+            <p>35 anos de história (1990-2025)</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>IEADTC - JARDIM CASTELÃO - HISTÓRICO (2025)</h1>
+        
+        <div class="year-marker">1990 </div>
+        <p>Tudo começou no dia 7 de julho do ano de 1990, quando a congregação de Parque Estrela, na época supervisionada pelo Presbítero Liberato, implantou um ponto de pregação no conjunto Jardim Castelão a pedido do <strong>Presbítero Raimundo Lopes Cardoso</strong>, popularmente chamado de "irmão Fernando", o qual, foi escolhido para ser o primeiro dirigente desse honroso trabalho, e, para auxiliá-lo nessa importante obra, foi escolhido o então auxiliar Francisco Carlos Ferreira da Silva, atualmente Presbítero Silva, que por quase 30 anos contribuiu com nossa congregação.</p>
+        
+        <p>Naquela época, como os irmãos ainda não tinham um templo para se reunirem e cultuarem ao Senhor, os primeiros cultos foram realizados em um terreno que ficava no entorno da residência do irmão Fernando Cardoso. Mas isso não era obstáculo para aqueles irmãos que cumpriram com excelência o chamado e a missão de serem crentes em Jesus, pois na simplicidade daquele lugar eles oravam, louvavam, evangelizavam e assim a bênção de Deus era com eles.</p>
+        
+        <div class="image-container">
+            <img src="../images/1.jpg" alt="Foto Presbítero Raimundo Lopes Cardoso e Esposa" class="content-image">
+            <p class="image-caption">Pb. "Irmão Fernando” - 1990 a 1995</p>
+        </div>
+
+        <div class="year-marker">1991</div>
+        <p>Um ano depois, em 1991, o referido irmão Fernando e sua família transferiram-se para a Congregação de José Walter, a qual na época era supervisionada pelo Pastor Samuel Façanha. Nesse mesmo ano o ponto de pregação no Jardim Castelão tornou-se uma sub congregação, desta vez vinculada à Congregação de José Walter.</p>
+        
+        <p>Ainda em 1991, os irmãos passaram a se reunir em um espaço na residência do irmão Tarcísio, cunhado do irmão Fernando Cardoso, residência esta, que se situava na esquina da Rua 4 com a Rua 10, onde hoje está localizada a praça do Jardim Castelão. Ocorreu que nessa casa que abrigava os trabalhos da então sub congregação, foi vendida e os irmãos tiveram que alugar um imóvel na Rua 3, para continuarem se reunindo e cultuando ao Senhor.</p>
+        
+        <p>Nos dias 26 e 27 de abril de 1991 houve uma cruzada evangelística no bairro de Jardim Castelão e o Altar do culto foi montado justamente no terreno onde hoje acha-se encravada a nossa congregação, pois o Senhor nosso Deus providenciou este exato terreno no qual em meados do ano de 1992 teve início a construção do primeiro templo da Assembleia de Deus Templo Central em nosso bairro.</p>
+        
+        <div class="year-marker">1992</div>
+        <p>Em função dos gastos, os irmãos voltaram a cultuar no terreno do irmão Fernando Cardoso para que todo dinheiro arrecadado fosse investido na construção. Naquele tempo havia grandes limitações financeiras, sendo que muitas vezes o irmão Fernando fabricava produtos de limpeza caseiros e em uma bicicleta os vendia no bairro e comunidades vizinhas para arrecadar recursos para ajudar a dar continuidade à obra de edificação do templo. Entretanto, os obstáculos não eram apenas financeiros, pois também acontecia que quando os irmãos chegavam na obra pela manhã encontravam as paredes caídas ao chão. As dificuldades eram muitas, mas o Senhor deu vitória sobre todas elas e nenhum impedimento nos prevaleceu, pois, "operando Deus, quem impedirá?".</p>
+        
+        <div class="year-marker">1993</div>
+        <p>Com a graça de Deus em janeiro de 1993 finalmente foi realizado o primeiro culto no templo, que ainda estava em plena fase de construção.</p>
+        
+        <p>Nesse período a, ainda, Sub congregação de Jardim Castelão já contava com um quadro de obreiros, e o pleno funcionamento do departamento de Senhoras, que foi o primeiro departamento a ser implantado, o qual foi nomeado como Conjunto Estrela da Manhã pela Adriana, filha do irmão Fernando Cardoso.</p>
+        
+        <p>Nesse tempo também já se contava com o regular funcionamento do Departamento de Crianças, nomeado como conjunto Cântico de Davi pelo irmão Fernando, bem como o funcionamento do Departamento de Jovens, que foi nomeado como conjunto Heróis da fé, também pela Adriana, filha do irmão Fernando Cardoso.</p>
+        
+        <p>Pouco tempo depois, em um culto de Santa Ceia no Conjunto José Walter foi realizado o desmembramento da nossa Congregação. Desse modo é que, com a bênção de Deus e a autorização do Pastor Sebastião Mendes Pereira (in memória), então presidente da Assembleia de Deus Templo Central, Jardim Castelão passava a ser uma congregação.</p>
+        
+        <div class="year-marker">1995</div>
+        <p>Na ADTC Jardim Castelão o pastorado do irmão Fernando, que hoje dorme no Senhor, durou até 1995, quando foi substituído pelo <strong>Diácono Sobrinho</strong>, o qual era proveniente da Congregação de Parque Estrela e que esteve no pastoreio de nossa congregação por apenas um ano, sendo sucedido pelo <strong>Diácono Antônio de Campos</strong> (in memória). Mesmo com a congregação em plena atividade naquele templo desde 1993, a inauguração oficial só aconteceu depois de uma reforma ocorrida em 1997, sob o pastoreio do irmão Campos.</p>
+        
+         <div class="image-container">
+            <img src="../images/2.png" alt="Diácono Sobrinho" class="content-image">
+            <p class="image-caption">Dc. Sobrinho - 1995 a 1996</p>
+        </div>
+
+        <div class="year-marker">1999</div>
+        <p>No ano de 1999, o <strong>Pastor Adauto Brás</strong>, que posteriormente por muitos anos foi supervisor em São João do Tauape, assumiu temporariamente o Jardim Castelão, sendo sucedido dois meses depois pelo <strong>Presbítero Frank</strong>.</p>
+        <div class="image-container">
+            <img src="../images/4.jpg" alt="Pastor Adauto Brás" class="content-image">
+            <p class="image-caption">Pr Adalto Brás - 1999 (2 meses)</p>
+        </div>
+        <p>No Pastoreio do irmão Frank, entre outras coisas, foi implantado o Ministério da Família, tendo sido esse o primeiro entre todas as congregações de Fortaleza, bem como foi adquirido um terreno na comunidade Novo Perimetral, onde foi inaugurada a nossa primeira sub congregação em meados do ano 2000.</p>
+       
+        <div class="image-container">
+            <img src="../images/5.jpg" alt="Presbítero Frank" class="content-image">
+            <p class="image-caption">Pb. Frank - 1999 a 2001</p>
+        </div>
+
+        <div class="year-marker">2001</div>
+        <p>Em 2001 o <strong>Pastor João Marcos</strong>, que era Diácono da congregação, assumiu o valoroso trabalho de pastorear, tornando-se o 6° supervisor de nossa Congregação. Na gestão do Pastor João Marcos, dentre outras coisas, foi implantado o departamento de eventos e o serviço de recepção. No período do seu pastorado ouviu-se uma profecia em que Deus disse que aqui seria construído um grande e belo templo em que o Senhor Jesus o encheria de salvos para servi-lo e adorá-lo.</p>
+        <div class="image-container">
+            <img src="../images/6.jpg" alt="Pastor João Marcos" class="content-image">
+            <p class="image-caption">Pr João Marcos - 2001 a 2014</p>
+        </div>
+        <div class="year-marker">2010</div>
+        <p>O tempo passou, e até que em março de 2010, ainda na gestão do então Presidente Pastor Sebastião Mendes Pereira (in memória) deu-se início as obras no Jardim Castelão, que foram continuadas pelo então Presidente Pastor José Deusdedit Farias (in memória), mas teve sua conclusão na gestão do atual Presidente Pastor Antônio José Azevedo Pereira, o qual dirigiu o culto de inauguração do novo templo em 21 de agosto de 2012.</p>
+        
+        <div class="year-marker">2014</div>
+        <p>No início do ano de 2014, o dirigente local Pr João Marcos foi consagrado para pastorear a Assembleia de Deus em Pindoretama, igreja que pastoreia até a presente data e que tem experimentado o mover de Deus e promovido significativas realizações, findando assim seu exercício pastoral em nossa congregação.</p>
+        
+        <p>No dia 16 de janeiro de 2014 foi empossado o 7º supervisor na história da IEADTC Jardim Castelão, o <strong>Pastor Carlos Otávio Sombra da Silva</strong> (in memória). Na gestão do saudoso e amado Pastor Carlos Otávio, logo no primeiro ano, foi incentivado a criação do grupo de louvor, Ministério Plenitude, ainda vinculado ao conjunto de jovens. Também foi implantado em 2015 o departamento de Adolescentes, que juntamente com o departamento de Jovens formam o Ministério da Juventude.</p>
+        
+        <div class="image-container">
+            <img src="../images/7.jpg" alt="Pastor Carlos Otávio Sombra da Silva" class="content-image">
+            <p class="image-caption">Pastor Carlos Otávio Sombra da Silva - 2014 a 2018</p>
+        </div>
+
+        <div class="year-marker">2015</div>
+        <p>Ainda em 2015 foram iniciadas e concluídas as obras de reforma da sub congregação na comunidade Novo Perimetral. Em 2016 foi criada a equipe de recepção e acolhimento para atuação nos cultos aos domingos, quintas-feiras e festas da igreja.</p>
+        
+        <div class="year-marker">2017</div>
+        <p>Em 2017 foi oficializado o departamento de Mídia, e também foi implantado o ponto de pregação na comunidade Novo Jardim Castelão. Ainda nesse ano, o grupo de louvor Ministério Plenitude, que era ligado ao Ministério da Juventude, ganhou autonomia em janeiro de 2018.</p>
+        
+        <p>Sob o pastoreio do Pr. Carlos Otávio foi realizado um grande e lindo casamento coletivo e várias Cruzadas Evangelísticas, as quais sempre contaram com a colaboração e empenho da nossa congregação e dos que nessa casa servem ao Senhor.</p>
+        
+        <p>Nesse pastoreio registramos também a chegada de novos equipamentos e instrumentos musicais, as reformas do salão anexo e das salas da EBD, a ampliação da cozinha, a climatização da congregação, a informatização da secretaria, e a implementação de um anexo do Projeto <em>Compassion</em> aqui na congregação.</p>
+        
+        <p>No mês derradeiro de sua administração, foi feita a obra de transformação do salão superior em dois novos equipamentos, que são: a sala para material das equipes de arte e decoração, bem como a sala do berçário, o qual foi climatizado e adequado com a valorosa colaboração do casal Irmã Ivonete Barros e do Auxiliar Rivanildo Barros, conhecido como Irmão Terto.</p>
+        
+        <p>Mas a realização que mais alegrava ao saudoso e amado Pr Carlos Otávio foi o crescimento significativo na membresia de nossa congregação, que passou de 77 membros cadastrados que tínhamos em janeiro de 2014 para 137 membros cadastrados em janeiro de 2018, sem contabilizar os congregados.</p>
+        
+        <p>Por motivos de força maior, o nosso presidente Pastor Antônio José de Azevedo Pereira, solicitou que o Pastor Carlos Otávio voltasse ao Templo Sede. Tal solicitação foi prontamente atendida, mas embora tenha se distanciado do pastoreio da ADTC Jardim Castelão, nossa congregação jamais saiu de seu coração. Sempre seremos também a congregação do Pr. Carlos Otávio, pois por essa ele sempre teve extremo zelo, atenção e cuidado - podemos dizer que seus olhos brilhavam e o coração batia de forma diferenciada sempre que a pauta e o assunto fosse ADTC Jardim Castelão.</p>
+        
+        <p>Se vivo fosse, Pr Carlos Otávio, sua esposa Ir. Meire e suas filhas, seriam presença garantida nessa linda festa, pois sempre soubemos que éramos a sua congregação do coração. Mas embora ele não esteja conosco no dia de hoje (pois desfruta de companhia excelentemente melhor), queremos declarar que "somos muito gratos e felizes pela oportunidade de termos sido feitos ovelhas do seu pastoreio e que ele estará sempre na lembrança de cada crente dessa igreja que o ama e que o mesmo jamais saiu dos nossos corações.</p>
+        
+        <div class="year-marker">2018</div>
+        <p>No dia 28 de janeiro de 2018 foi empossado o 8º supervisor na história desta congregação, o <strong>Pastor Ademar de Souza</strong>. Queridos por todos os irmãos, Pr. Ademar, sua esposa irmã Karla Teles e suas filhas, já se congregavam conosco há mais de 3 anos. Procedente da Assembleia de Deus Ministério Montese, onde teve um excelente histórico, Pr. Ademar durante muitos anos pastoreou várias congregações daquele Ministério, posteriormente retornando ao seu Ministério de origem Assembleia de Deus Templo Central.</p>
+        
+        <div class="image-container">
+            <img src="../images/8.jpg" alt="Pastor Ademar de Souza" class="content-image">
+            <p class="image-caption">Pr. Ademar de Souza - 2018 a 2021</p>
+        </div>
+
+        <p>Em seu pastoreio, Pr. Ademar de Souza deu continuidade às obras de melhorias de nossa estrutura do templo, do anexo e da nossa sub congregação. Nesse período também houve continuidade dos trabalhos no Projeto <em>Compassion</em>, implantação das Campanhas de Oração, e muitas outras atividades dos Ministérios com seu apoio e direção pastoral. Registramos aqui, o empenho e participação de nosso querido Pr. Ademar, nas cruzadas evangelísticas, seminários temáticos, visitas e aconselhamentos domiciliares, bem como busca pela excelência na missão de servir ao Senhor.</p>
+        
+        <div class="year-marker">2020</div>
+        <p>Destaquemos, ainda, a corajosa atuação do Pr. Ademar de Souza no cuidado, visita e direcionamento pastoral diante das incertezas, dificuldades e desajustes trazidas pela primeira fase da Pandemia Mundial de Coronavírus, que assolou o Brasil e o mundo no começo do ano de 2020. Somos gratos ao Pr Ademar, pois quando todos nós precisamos nos isolar, o senhor não teve sua vida por preciosa e ousou se expor para cuidar, orientar e tratar cada ovelha de seu rebanho, especialmente as mais vulneráveis. Enquanto não eram possíveis reuniões presenciais, o Pr. Ademar e Ir. Karla, faziam alguns encontros on-line, virtuais, para que de alguma forma pudesse levar alimento espiritual e ânimo a todos.</p>
+        
+        <div class="year-marker">2021</div>
+        <p>Em fevereiro de 2021 pastor Ademar foi convidado a liderar o ministério de casais da Sede do Templo Central, encerrando assim seu valoroso pastoreio na ADTC Jardim Castelão.</p>
+        
+        <div class="image-container">
+            <img src="../images/9.jpg" alt="Pastor Demétrius Martins" class="content-image">
+            <p class="image-caption">Pr Demétrius Martins - 2021 e atual pastor!</p>
+        </div>
+
+        <p>No dia 08 de fevereiro de 2021 foi empossado o 9° supervisor na história da ADTC Jardim Castelão, o <strong>Pastor Demétrius Martins Marques</strong>. Querido por todos os irmãos, Pr. Demétrius foi designado pelo Pastor Presidente Antônio José Azevedo Pereira, para dar continuidade ao excelente trabalho realizado por seus antecessores.</p>
+        
+        <p>Procedentes da Assembleia de Deus Templo Central - Ministério Messejana, Pr. Demétrius Martins, sua esposa irmã Ana Paula Marques ou Ir. Paulinha como prefere ser chamada e suas filhas, tiveram um excelente histórico. Por muitos anos Demétrius, pastoreou várias congregações daquele Ministério, sendo que em 12 de janeiro de 2020 passou a fazer parte do Ministério Templo Central de Fortaleza, juntamente com sua família, onde permaneceram à disposição do nosso amado Pastor Presidente até ser empossado na ADTC Jardim Castelão. Atualmente tem exercido seu ministério com alegria, dedicação e excelência, conforme o direcionamento do Espírito Santo e das diretrizes emanadas de nosso Pastor Presidente.</p>
+        
+        <p>Pr. Demétrius Martins, chegou à congregação, pouco antes do início da segunda onda da Pandemia Mundial de Coronavírus, porém não mediu esforços para fazer a obra crescer e alcançar vidas. Sua atuação foi corajosa no cuidado, visita e direcionamento pastoral diante das sequelas, dificuldades e desajustes mantidos pela segunda fase da Pandemia de Coronavírus, atuou não apenas em nossa comunidade, mas também além das fronteiras, através de nosso canal no Youtube e Redes sociais.</p>
+        
+        <p>Pr. Demétrius, dirigido pelo Senhor, entendeu que, mesmo com o distanciamento social, a igreja precisava continuar unida e atuante. Para tal, juntamente com os obreiros, equipe do estratégico e da mídia de nossa congregação, orquestrou os trabalhos internos via aplicativos como <em>Google Meets</em>, <em>Zoom e Instagram</em>, visto que logo após sua posse os templos precisaram ser fechados mais uma vez. Iniciou-se assim os trabalhos de oração, palestras, cultos e reuniões on-line.</p>
+        
+        <p>Somos gratos ao Pr Demétrius, pois quando todos nós ainda éramos orientados a nos isolar, o senhor implementou meios físicos e digitais, que nos aproximaram e mostraram que nós e nossos lares somos templos de adoração ao Senhor Jesus. Como por exemplo: a campanha Conectados em Oração via Google Meet, Relógio de Oração via Whats App, bem como cultos e palestras via Instagram, Facebook e YouTube.</p>
+        
+        <p>Para que nossos cultos pudessem ser transmitidos on-line, realizou a campanha de troca de nossa mesa de som de analógica para digital e liderou as demais ampliações e adequações em nossos equipamentos de mídia, possibilitando assim a transmissão em tempo real e a interação com os irmãos que nos assistem. Com isso nossa congregação deu os primeiros passos no mundo virtual e segue em constante aperfeiçoamento. Nesse ponto, não poderíamos deixar de louvar ao Senhor por todos os esforços de cada irmão e irmã, que não mediram esforços e ombrearam com nosso pastor esse importante trabalho, para que a Palavra do Senhor fosse transmitida com qualidade e excelência.</p>
+        
+        <p>Na área administrativa, implantou o Sistema de cadastro on-line dos membros e agendas online, facilitando o acesso as informações de suas ovelhas, para realização de visitas, homenagens, organização de eventos, dentre outros...</p>
+        
+        <p>Mas, isso não ficou apenas no campo virtual, pois à medida que as restrições eram amenizadas, como bom ministro e pastor zeloso, e claro, preocupado com suas ovelhas, realizou várias visitas para conhecer melhor os membros da congregação e também para ajudá-los no fortalecimento espiritual através da palavra de Deus, oração, aconselhamentos e distribuição de cestas básicas para os mais carentes.</p>
+        
+        <p>Impulsionou, juntamente com a equipe do nosso anexo representado pela Irmã Wila Oliveira e direção do Colégio Doris Jonhson, na pessoa da irmã Vânia Queiroz e demais colaboradoras, o Projeto da <em>Compassion Internacional</em> da nossa congregação. Por meio desse importante projeto atendemos crianças da nossa comunidade levando instrução pedagógica, trabalhos lúdicos, boa alimentação, ajuda beneficente as famílias e, claro, ensinamos a palavra de Deus.</p>
+        
+        <p>Em agosto de 2021 foi implantado o núcleo de nível médio em Teologia do STADEC em nossa congregação, proporcionando a oportunidade de instrução e conhecimento não apenas para a liderança dos departamentos, mas para todos os nossos membros, e também para irmãos de outras congregações e denominações.</p>
+        
+        <p>Entendendo, que devemos ofertar o melhor de nosso tempo e de nossos esforços ao Senhor Jesus, nosso Pr. Demétrius realizou obras de modernização na estrutura física de nossa congregação, tanto na área interna como externa.</p>
+        
+        <p>Compreendendo que a evangelização é razão de ser da nossa igreja, e que essa, é a principal missão dada pelo nosso Senhor e Salvador Jesus Cristo, o Pr. Demétrius impulsionou várias obras juntamente com toda a equipe do Departamento de Missões e Lideranças de departamentos, trabalhos como, de evangelismo pessoal, campanhas evangelísticas que contaram com distribuição de sopão, cruzadas evangelísticas com sorteio de cestas básicas, distribuição de Bíblias e outros itens, cultos campais, e a implementação do Projeto Luz na Praça, que promove cultos e atividades evangelísticas na praça do nosso bairro, também ressaltamos a implantação do batismo nas águas aqui mesmo no bairro, com a participação de toda a congregação, entre outras atividades.</p>
+        
+        <p>Em tão pouco tempo e mesmo diante de tantos desafios, vemos o agir de Deus sobre a vida de nossos pastores e a sabedoria e estratégia vinda do alto para fazer a nossa congregação crescer em quantidade, graça e conhecimento. Obrigado, Pr Demétrius, porque o senhor também não teve sua vida por preciosa, e tão somente tendo a certeza de estar fazendo o seu melhor para o Senhor Jesus e só n'Ele confiando, ao mesmo tempo em que expôs sua vida, para cuidar bem, do rebanho também inovou criando estratégias e promovendo os meios para cuidar, orientar e tratar cada ovelha que a partir de então passou a ser dirigida pelo seu cajado.</p>
+        
+        <div class="year-marker">2024</div>
+        <p>Sob liderança e pastoreio de Pastor Demétrius e sua esposa Paulinha nosso ano de 2024, foi marcado por uma série de melhorias, eventos e atividades significativas em nossa comunidade, demonstrando o compromisso e a dedicação de nossa liderança pastoral, que nos lidera e ensina servir ao Senhor com Excelência, buscar o poder do Alto e compartilhar a palavra de Deus. Louvamos ao Senhor pela atuação dos nossos departamentos e os principais eventos e realizações do edificante ano de 2024, como:</p>
+        
+        <h2>Grupos de Vida e Oração da Juventude</h2>
+        <p>Trabalho realizado periodicamente meditando na Palavra, socializando-se e levantando-se em oração buscando o direcionamento do Espirito Santo, as bênçãos do Senhor estabelecendo a Palavra de Deus como Lâmpada para os pés.</p>
+        
+        <h2>Grupos de Vida e Culto de Mulheres</h2>
+        <p>As mulheres da ADTC reunidas periodicamente para meditar na Palavra, confraternizar-se, celebrar a vida e compartilhar o agir de Deus na vida de cada irmã. Também foram realizados cultos em nossa congregação, mulheres do Setor 16, celebrando a bondade do Senhor, a alegria de servir a Jesus, bem como louvando a Deus pela união e a força feminina que nosso Deus tem levantado em nossa congregação.</p>
+        
+        <h2>Círculo de Oração e Consagração</h2>
+        <p>Nossa Congregação em 2024 não cessou de orar e meditar na Palavra do Senhor, sempre nas segundas e quartas-feiras reunindo-se no Templo, de joelhos no chão, ouvidos atentos e meditando na Palavra, buscando manifestação do Espírito Santo, o agir de e o direcionamento do Senhor. Por meio da oração, nesse ano de 2024 nossa Congregação encontrou abrigo, esperança, portas abertas, cura e conforto no Senhor nosso Deus.</p>
+        
+        <h2>Ministério de Louvor (Plenitude)</h2>
+        <p>Renovou-se nesse ano, sempre dependente da unção e mover do Espírito, mobilizou nossa igreja a louvar ao Senhor com alegria, sinceridade e mover do alto, levando cada crente a ligar-se com o Senhor, se derramar diante d'Ele e entoar o verdadeiro louvor ao Rei dos Reis e Senhor dos Senhores.</p>
+        
+        <h2>Departamento de Casais</h2>
+        <p>Mobilizou-se o inteiro para fortalezar o vínculo conjugal e familiares dos casais de nossa Congregação por meio dos Gv's de Casais, Ensaios, Consagrações Mensais, Confraternizações e vigílias, não medindo esforços para que tenhamos casais unidos segundo o propósito do Senhor, atuantes na igreja e conduzidos pelo Espírito e pela Palavra do Senhor.</p>
+        
+        <h2>Escola Bíblica Dominical e Discipulado</h2>
+        <p>Constitui-se como recurso valioso para os membros que desejaram crescer em sua fé e se tornar discípulos de Jesus Cristo, contando com professores compromissados e atuantes, a cada domingo promovendo memoráveis momentos de reflexão, aprendizado e meditação na Palavra do Senhor. Nesse ano tivemos os cultos da EBD ao final de cada trimestre, no qual celebramos os momentos de aprendizado, agradecemos a todos os professores, alunos e colaboradores por esse importante trabalho de promoção do Estudo da Bíblia e crescimento espiritual.</p>
+        
+        <h2>Departamento de Missão estratégica, Acolhimento e o Serviço de Portaria</h2>
+        <p>Equipe que tem bem recepcionado a todos os que chegam em nossa congregação, tanto visitantes como novos membros, orientando-os, acolhendo e direcionando para os departamentos da igreja. Para tanto, acolheu e acomodou a todos com alegria, sempre com um sorriso no rosto e no coração a alegria de servir ao Senhor com Excelência, não medindo esforços para bem acolher a todos os que chegam em nossa congregação para adorar e servir ao Senhor em nossos cultos e reuniões de oração.</p>
+        
+        <h2>Departamento Infantil (Crianças TC) e Berçário</h2>
+        <p>Implementaram melhorias, promoveram espaço climatizado, limpo e acolhedor para as crianças de nossa congregação, sempre esforçando-se para levar nossas crianças ao conhecimento da Palavra, interação cristã, louvor e oração.</p>
+        
+        <h2>Departamento de Missões e Evangelismo</h2>
+        <p>Tem sido atuante e compromissado, é uma força motriz na disseminação do Evangelho, levando a mensagem de salvação a todos tocando inúmeras vidas, trazendo Jesus e esperança para aqueles que mais precisam.</p>
+        
+        <h2>Equipe de Teatro e Coreografia</h2>
+        <p>Por meio de artes cênicas e coreografias tem se mostrado uma importante estratégia de transmitir mensagens bíblicas de forma criativa e emocionante. Com apresentações que vão desde peças teatralizadas até danças e coreografias, fazendo com que a ministração através das artes sejam uma bênção para a nossa igreja.</p>
+        
+        <h2>Equipe de Mídia</h2>
+        <p>Da nossa igreja desempenha um papel importantíssimo na disseminação da mensagem do Evangelho para além das paredes da igreja. Com a responsabilidade de capturar e transmitir os momentos especiais dos cultos, eventos e atividades, esta equipe tem trabalhado incansavelmente para garantir que a palavra de Deus seja compartilhada com o máximo de pessoas possível.</p>
+        
+        <h2>Colaboradoras da cozinha</h2>
+        <p>São as guardiãs do amor e da hospitalidade, garantindo que todos sejam alimentados com sorriso, muito amor e alimentos deliciosos. Seu trabalho, muitas vezes por trás das cenas, é vital para o bem-estar e a alegria dos nossos membros e visitantes. Desde a preparação de refeições para os eventos até o cuidado com os detalhes que tornam cada evento especial, as colaboradoras da cozinha demonstram um amor e uma generosidade que são verdadeiramente inspiradores.</p>
+        
+        <h2>Visitadoras</h2>
+        <p>Tem sido agentes de Deus de compaixão e cuidado, que levam a presença da igreja, a Palavra de Deus e o cuidado do Senhor para aqueles que estão ausentes, doentes, idosos ou necessitados. Com visitas regulares a lares, orações e pregação domiciliar da Palavra, elas oferecem conforto, apoio espiritual e uma escuta atenciosa. O trabalho delas não apenas traz alívio e alegria para aqueles que visitam, mas também é um testemunho poderoso do amor e da misericórdia de Deus.</p>
+        
+        <h2>Visão Estratégica</h2>
+        <p>Tem si mobilizado para que cada membro da AD Jardim Castelão Cresça em graça, unção e sabedoria. Para tanto, mobilizamos os irmãos e irmãs a participarem dos cursos online oferecidos pela plataforma e-ADTC, oportunidade na qual certificamos centenas de irmãos que se dedicaram e concluíram os cursos ofertados por meio da e-ADTC: Nossa Igreja, Trilha de Formação Inicial, como se tornar uma Igreja Acolhedora, Grupos de Vida, compartilhando o Evangelho por meio dos relacionamentos e desenvolvendo uma cultura de serviços na Igreja local.</p>
+        
+        <div class="year-marker">2025</div>
+        <p>Nesse ano de 2025 foram realizados grandes trabalhos, mediante o discernimento e cuidado de nossa liderança, como, a Escola Bíblica de férias voltado para as crianças, proporcionando um espaço de aprendizado e diversão para as crianças durante as férias. O grupo de Evangelismo que incessantemente, realizam um trabalho lindo de levar a palavra de Deus a todos, compartilhando a boa notícia do Evangelho com aqueles que ainda não conhecem a Jesus Cristo.</p>
+        
+        <p>Nossa igreja ADTC Jardim Castelão, tem como visão ser uma igreja fiel a proclamação e vivência do Evangelho de Cristo, relevante no contexto social, reconhecida como um lugar de Restauração, Misericórdia e Ensino. Sendo assim na direção do nosso pastor Demétrius Martins, junto com os líderes da juventude, foi identificada a necessidade de trabalharmos especificamente para adolescentes, então, orientados pela graça de Deus e com todo zelo e cuidado pela sua obra, foi sendo implantado no dia 30 de março de 2025, oficialmente o Departamento de Adolescentes, Geração Valente.</p>
+        
+        <p>Por fim, não poderíamos deixar de louvar ao Senhor por providenciar para que seu servo Pastor Antônio José Azevedo Pereira, estivesse a frente de nosso Ministério Templo Central em Fortaleza até os presentes dias, o qual tem sido portador de conforto, esperança e direcionamento do Senhor para nossa congregação durante seu pastorado. Altamente zeloso com a obra do Senhor, com diligência e maestria tem liderado a todo o nosso ministério nesses últimos tempos, não permitindo que o ativismo político, o mundanismo, as más condutas nem as heresias subissem aos nossos púlpitos.</p>
+        
+        <p>Pr Antônio José, agradecemos por que tens liderado nosso ministério e também nossa congregação de forma sábia, honrada e sob a luz da Palavra do Senhor. Por todo o exposto, enfrentando muitos desafios, mas acima de tudo, testemunhando grandes vitórias, podemos afirmar que em todas essas coisas o nome do Senhor está sendo glorificado e o evangelho anunciado em nosso bairro. Enfim, até aqui tem nos ajudado o Senhor. Tais virtudes tão evidentes em seu pastoreio são imprescindíveis nesses últimos dias em que muitas autoridades eclesiásticas fracassam em servir, e desistem de tão nobre missão.</p>
+        
+        <p>No tempo presente, nos dias 30 e 31 de agosto de 2025, celebrando a Jesus, pelos 35 anos de fundação desse importante trabalho, relembramos nossa história de intensas lutas e memoráveis vitórias, saudando nossos pioneiros e seus familiares que dedicaram suas vidas a esta obra. Comemoramos os avanços conquistados como excelentes instalações e estrutura física do nosso Templo, o crescimento de nossa membresia e de congregados, departamentos e ministérios atuantes, como, a EBD com ensino de excelência, o trabalho valoroso no DEMID local, fervorosas mulheres de oração no Ministério Feminino, o perfeito louvor no Ministério Infantil, Adolescentes e Jovens, que compõem essa Geração Valente e verdadeiros Heróis da fé, Famílias avivadas e cheias do Espírito Santo, Ministério de Louvor que nos elevam à intimidade com o Senhor, um quadro de obreiros constituído de valorosos servos consagrados e dedicados à obra do Senhor.</p>
+        
+        <p>Enfim, é dessa forma que chegamos aos 35 anos, como uma Igreja sadia, madura, pentecostal, referência de fé e adoração para nossa comunidade e que venham mais 30, 50, 100 ou 150 anos, estaremos aqui louvando e honrado ao nome do Senhor Jesus Cristo!</p>
+        
+        <p>Amém!</p>
+        
+        <h2>DIRIGENTES ADTC JARDIM CASTELÃO:</h2>
+        <ol>
+            <li>Pb. "Irmão Fernando" - 1990 a 1995</li>
+            <li>Dc. Sobrinho - 1995 a 1996</li>
+            <li>Dc. Antônio de Campos - 1996 a 1999</li>
+            <li>Pr Adalto Brás - 1999 (2 meses)</li>
+            <li>Pb. Frank - 1999 a 2001</li>
+            <li>Pr João Marcos - 2001 a 2014</li>
+            <li>Pr Carlos Otávio - 2014 a 2018</li>
+            <li>Pr. Ademar de Souza - 2018 a 2021</li>
+            <li>Pr Demétrius Martins - 2021 e atual pastor!</li>
+        </ol>
+    </div>
+    
+    <footer>
+        <p>© 2025 - IEADTC Jardim Castelão - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
